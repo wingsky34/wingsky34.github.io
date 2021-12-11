@@ -1,552 +1,736 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>畢專小說</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>畢專小說-ご縁がありますように</title>
+
 <style type="text/css">
-body {
-	margin-left: 0px;
-	margin-top: 0px;
-	margin-right: 0px;
-	margin-bottom: 0px;
-}
-.Title1 {
+	@Media Print { Body {display:none;}}
 	
-	font-family: "MS Mincho";
-	font-size: 50px;
-	color: #1E1E1E;
-	text-shadow: 10px 10px 20px #333;
-	width: 100%;
 	
-}
-.Title2{
-	line-height: 100%
-	width: 100%;
-	font-family: "MS Mincho";
-}
 
-.content1{
-	line-height: 250%;
-	width: 100%;
-	font-family: "MS Mincho";
-	
-}
+	.flip1 {
+		z-index: 3;
+		border: 0px outset rgba(9, 15, 9, 0.479);
+		width:fit-content;
+		float: right;
+		position:relative;
+		margin: 0px 0px;
+		}
 
-a:link {
-	text-decoration: none;
-	color: #124CAC;
-	text-shadow: 1px 1px 1px #1E1E1E;
-}
-a:visited {
-	text-decoration: none;
-	color: #C27548;
-}
-a:hover {
-	text-decoration: none;
-	color: #1E1E1E;
-}
-a:active {
-	text-decoration: none;
-	color: #DDD;
-}
+	/*.flip2 {
+		border: 0px outset red;
+		width:880px;
+		float: left;
+		position: relative;
+		animation: mymove1 0.3s 1;
+		animation-play-state: running;
+		margin: 0px 0px;
+		}
+
+		@keyframes mymove1 {
+		from {left: 0px;}
+		to {left: 880px;}
+	}*/
+
+	.flip3 {
+		z-index: 3;
+		border: 0px outset rgba(9, 255, 0, 0.479);
+		width:fit-content;
+		float:left;
+		position: relative;
+		margin: 0px 0px;
+		}
+
+	/*.flip4 {
+		border: 0px outset red;
+		width:880px;
+		float: right;
+		position: relative;
+		animation: mymove2 0.3s 1;
+		animation-play-state: running;
+		margin: 0px 20px;
+		}
+
+		@keyframes mymove2 {
+		from {right: 0px;}
+		to {right: 880px;}
+	}*/
+
+	.chapterlist {
+		z-index: 5;
+		position:absolute;
+		transform:translate(-14.5em,5.5em);
+		border: 0px solid red;
+		width:fit-content;
+		padding: 10px 10px;
+		margin: 0px 0px;
+		height: fit-content;
+		background-color: #d7b98edc;/*砥粉*/
+		box-shadow:  5px 5px 20px gray;
+		border-radius: 20px;
+		animation: list 0.8s 1;
+		animation-play-state: paused;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	.chapterlist2{
+		z-index: 6;
+		position:absolute;
+		transform: translate(0em,5.5em);
+		border: 0px solid green;
+		width: 30px;
+		height:300px;
+	}
+
+	.button {
+			background-color: white;
+			border: none;
+			padding: 10px 20px;
+			text-align: center;
+			text-decoration: none;
+			font-family: "MS Mincho";
+			display: inline-block;
+			font-size: 30px;
+			font-weight: bold;
+			margin: 5px 5px;
+			transition-duration: 0.1s;
+			cursor: pointer;
+			border-radius: 8px;
+			}
+
+			.button1:active {
+			transform: translateX(-5px);
+			}
+
+			.button1 {
+			font-family: "Times New roman";
+			background-color: #8D742A; /*肥後煤竹*/
+			color: white; 
+			}
+
+			.button1:hover {
+				background-color: #a39055;
+				color: white;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 1px 1px 0 rgba(0,0,0,0.19);
+			}
+
+			.button2:active {
+				transform: translateX(5px);
+			}
+
+			.button2 {
+				font-family: "Times New roman";
+				background-color: brown; 
+				color: white; 
+			}
+
+			.button2:hover {
+				background-color: rgb(168, 102, 102);
+				color: white;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 1px 1px 0 rgba(0,0,0,0.19);
+			}
+
+			.sw:active {
+				transform: translate(5px,5px);
+			}
+
+			.sw {
+				font-weight:bold;
+				font-family: "Times New roman";
+				font-size: 20px;
+				background-color: #E2943B; /*朽葉*/
+				color: white; 
+			}
+
+			.sw:hover {
+				background-color: #ecbd86;
+				color: white;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 1px 1px 0 rgba(0,0,0,0.19);
+			}
+
+			input[type='button']{
+				font-size: 20px;
+				border: none;
+				text-align: center;	
+				font-family: "Times New roman";
+				background-color: #554236; /*黒鳶*/
+				color: white; 
+				border-radius:100%;
+				padding: 10px 17px;
+				margin: 5px 5px;
+				cursor: pointer;
+			}
+
+			input[type='button']:hover {
+				background-color: #8a8a8a;
+				color: white;
+				box-shadow: 0 2px 2px 0 rgba(0,0,0,0.24), 0 1px 1px 0 rgba(0,0,0,0.19);
+				transform: translate(1px,5px);
+			}
+
+	#i1{
+		font-size: 25px;
+		text-align: center;	
+		width: 3em;
+		font-family: "Times New roman";
+		font-weight: bold;
+		background-color: #FCF6EE;
+		border-radius: 4px;
+		margin: 0px 5px;
+		padding: 0px 0px;
+	}/* # 是用id來分辨 */
+
+	.dropdown-content {
+		font-family: "MS Mincho";
+		display: none;
+		position: absolute;
+		transform: translate(10em,-3em);
+		background-color: #563f2ed8;
+		color: #FCF6EE;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		
+		z-index: 6;
+		padding: 5px 5px;
+	}
+
+	img {
+		z-index: -1;
+		filter: drop-shadow(0px 0px 2px gray);
+		max-width: 100%;
+ 		height: auto;
+	}
+
+	body{
+		margin-left: 0px;
+		margin-top: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		background-color: #FCF6EE;
+	}
+
+	.t2{
+		z-index: 0;
+		width:fit-content;
+		height: fit-content;
+		padding: 25px 25px;
+	}
+
+
+	.Title1{
+		font-family: "MS Mincho";
+		font-size: 50px;
+		color: #fcf6ee;
+		text-shadow: 2px 2px 1px #080808;
+		width: 100%;
+		font-weight: bold;
+	}
+
+	.Title2{
+		z-index: 4;
+		position:absolute;
+		transform: translateY(-4.2em);
+		border: 0px solid red;
+		width: 100%;
+		padding: 25px 0px;
+		background-color: #db8d71da;/*ときがら茶*/
+		border-radius: 20px;
+		animation: t 0.8s 1;
+		animation-play-state: paused;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes t {
+		0%{top: 0px;}
+		75%{transform:translateY(-2em);}
+		100%{transform:translateY(0em);}
+	}
+
+	@keyframes tback {
+		0%{transform:translateY(0em);}
+		25%{transform:translateY(0.2em);}
+		100%{transform:translateY(-4.2em);}
+	}
+
+	@keyframes list {
+		0%{transform: translate(-14.5em,5.5em);}
+		75%{transform:translate(-5em,5.5em);}
+		100%{transform:translate(0em,5.5em);}
+	}
+
+	@keyframes listback {
+		0%{transform: translate(0em,5.5em);}
+		25%{transform:translate(1em,5.5em);}
+		100%{transform:translate(-14.5em,5.5em);}
+	}
+
+	@keyframes cr {
+		0%{transform: translate(-10000em,-5000em);}
+		25%{transform:translate(-50em,-6em);}
+		75%{transform:translate(-2em,-6em);}
+		100%{transform:translate(0em,-6em);}
+	}
+
+	@keyframes crback {
+		0%{transform: translate(0em,-6em);}
+		25%{transform:translate(2em,-6em);}
+		75%{transform:translate(-100em,-6em);}
+		100%{transform:translate(-10000em,-5000em);}
+	}
+
+	.Title3{
+		z-index: 5;
+		position:absolute;
+		border: 0px solid green;
+		width: 100%;
+		height:15px;
+	}
+
+	.page{
+		line-height: 100%;
+		width: 100%;
+		font-size: 25px;
+		font-family: "Times New Roman";
+		text-shadow: 1px 1px 1px #333;
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.content1{
+		line-height: 250%;
+		width: 100%;
+		font-family: "MS Mincho";	
+		writing-mode: vertical-rl;
+	}
+
+	.bt{
+		line-height: 150%;
+		width: 100%;
+		font-size: 32px;
+		font-family:"MS Mincho";
+		text-decoration: none;
+		color: #CA7A2C;/*琥珀*/
+		text-shadow: 1px 1px 1px #080808;
+		font-weight: bold;
+		cursor: pointer;
+	}
+
+	.bt:hover{
+		color: #FEB268;
+	}
+
+	.copyright{
+		z-index: 4;
+		position:absolute;
+		transform:translate(-10000em,-5000em);
+		border: 0px solid red;
+		width: 100%;
+		padding:15px 0px;
+		background-color: #563f2ed8;/*焦げ茶*/
+		animation: cr 0.8s 1;
+		animation-play-state: paused;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	#copyright2{
+		z-index: 5;
+		position:absolute;
+		transform:translateY(-2em);
+		border: 0px solid green;
+		background-color: #d7b98edc;
+		font-size: 50px;
+		color: brown;
+		vertical-align: central;
+		width: fit-content;
+		height: fit-content;
+		border-radius: 15px;
+	}
+
+	a:link{
+		font-family:"MS Mincho";
+		text-decoration: none;
+		color: #F0A986;/*宍*/
+		text-shadow: 0px 0px 5px #080808;
+		font-weight:bolder;
+		font-size: 1em;
+	}
+
+	a:visited{
+		text-decoration: none;
+		color:#F0A986;
+	}
+
+	a:hover{
+		text-decoration: none;
+		color: #FEDFE1;/*桜*/
+	}
+
+	a:active{
+		text-decoration: none;
+		color: #F75C2F;/*紅緋*/
+	}
+
 </style>
+
 </head>
 
-<body><div align="center"><table width="100%" border="0"  cellpadding="100%">
 
-<tr>
-<td align="center" valign="middle"><a href="index.html" target="_top">
-  <div class="Title1">小説タイトル</div></a></td>
-</tr>
+<body><!--onmousemove="showCoords(event)"-->
 
+<div class="Title3" id="Title3" onmouseover="mouseover(this)" onmouseout="mouseout(this)"></div>
+<div class="Title2" id="Title2" >
+<table width="100%" id="t1">
 	<tr>
-	<td>
-	<hr>
-	<h1><div class="Title2">Chapter１</div> </h1>
-
-<h2><div class="content1">
-<hr>
-「……つまんないな。」 <br>
-
-あれからもう一週間。毎日変わらない教室と、教室の窓からの景色。 <br>
-
-飽きずにいられるわけがない。 <br>
-
-「静かにしてくださいー！」 <br>
-
-「例のドラマがさ～」 <br>
-
-「あーあの二人が結婚したやつ？いい話だったな～」 <br>
-
-「だから静かにしてって言ってるんですけどーー！！」 <br>
-
-チャイムは鳴ったものの、生徒たちは相変わらず大声ではしゃいでいる。 <br>
-
-まったくバカバカしい。なんでこんなバカどもと一緒にいなきゃならないのか。 <br>
-
-明香（あすか）はため息をついた。 <br>
-
-何がインターンだ。ただの罰じゃないか。 <br>
-
-「あ、先生もう廊下まで来てますよ！」 <br>
-
-「はい日直ー」 <br>
-
-「起立！」 <br>
-
-「礼！」 <br>
-
-「着席！」 <br>
-
-またつまらない一日が始まろうとしている。 <br>
-
-こんな無味な毎日を送ってるから、人間は退屈になるわけだ。 <br>
-
-「今日の授業は前回の続き……あのウイルスのとこらからですね」 <br>
-
-僕はただ窓から、落ちてゆく枝葉を眺めていた。 <br>
-
-『ーー断る』 <br>
-
-『まったくあなたは……どうしてそんなに嫌がるの？』 <br>
-
-『人間なんて、自己中でわがままな奴ばっかりじゃないか。もううんざりだ』 <br>
-
-『そんなに言わなくても……』 <br>
-
-彼女の眼には、悲しみに満ちている。 <br>
-
-『……』 <br>
- 
- ……悲しむのは、こっちの方だろ。 <br>
-
-「……では、今日の授業はここまで」 <br>
-
-先生の声が、明香を現実に引き込んだ。 <br>
-
-「ありがとうございましたー」 <br>
- 
-「それと……高さん、後で教員室に来るように」 <br>
-
-「はーい」 <br>
-
-「おいおい、今回はいくら？」 <br>
-
-「うぜー黙れ」 <br>
-
-「はいはい」 <br>
-
-教室の後ろに、男子生徒たちが騒いでいる。 <br>
-
-「……うざいなあ」 <br>
-
-明香は椅子から立ち上がった。 <br>
-
-今日の夕飯は何にしようかね。それが今の僕にとって唯一のお楽しみだ。 <br>
-
-「おい、そこの転校生」 <br>
-
-後ろから男子の声がした。 <br>
-
-「あぁ？」 <br>
-
-明香は不機嫌そうに返事をした。飯のことを考える最中に呼びかけられるのが大嫌いなのだから。 <br>
-
-「……なんだよ、その態度は」 <br>
-
-「それはこっちのセリフな気がするけどな。いきなり呼びかけてどういうつもりだ」 <br>
-
-バン！ <br>
-
-「お前さー全然わかってないな」 <br>
-
-目の前の男子は力強く、机をたたいた。 <br>
-
-「この教室のルールって知ってるか？このクラスに転校してきた以上、そのルールに従ってもらう」 <br>
-
-「ほう、ごっこ遊び楽しそうだな」 <br>
-
-「なっ……！」 <br>
-
-さげすんだ顔して、嘲笑うように明香はこう言った。 <br>
-
-「悪いが、僕は売られた喧嘩を買うほど暇じゃねえんだ」 <br>
-
-明香はカバンを斜め掛けた。 <br>
-
-「夕飯のほうが百倍大事だからな。じゃあ」 <br>
-
-カレーかうどんか……タピオカも悪くないな。などと考えながら、明香は何事もなかったかのように教室を出た。 <br>
-
-<hr>
-
-夕飯を終えて、僕はベッドの上でぼんやりと天井を見上げている。 <br>
-
-「いつ帰れるのかね……」 <br>
-
-昔の人間は、こんなに退屈なもんじゃなかったのになあ。 <br>
-
-明香はそっと目を閉じた。 <br>
-
-『ーーここ数十年間、怠っているようだわね』 <br>
-
-『なんのこと？』 <br>
-
-『依頼件数のことよ。解決数はともかく、依頼件数自体も減少の傾向を見せているわ。人間からの信頼を失っていってるのでは？』 <br>
-
-『別にいいじゃない。くだらないことしか言ってこないし』 <br>
-
-『……あなた、全然反省してないわね』 <br>
-
-『その必要がないからな。人間がいったいどんな願いをしているかをご自身で確かめてみたらどうだ？』 <br>
-
-『確かめたからあなたを説教しに来たのよ。何よその態度は！』 <br>
-
-あーめんどうくさい。 <br>
-
-『このままだと、あなたが神としての力も弱まっていくのよ。それでもいいのかしら？』 <br>
-
-『……それは……』 <br>
-
-『さすがにあなたでも、そうなりたくはないでしょうね』 <br>
-
-否定はできない。 <br>
-
-『まあ、そんなあなたに、絶好のチャンスを用意してあげたわよ。』 <br>
-
-『チャンス？』 <br>
-
-『人間界でインターンするのよ。』 <br>
-
-『は？』 <br>
-
-『は？じゃないわよ。明日から人間になりきって、人間への理解を深めてから帰ってくるのよ』 <br>
-
-『ちょ、まって、いくらなんでもこれは無茶すぎるだろ』 <br>
-
-『はいじゃあ、また来世でお会いしましょう！』 <br>
- 
-というわけで、退屈な高校生になって退屈な学校を通って退屈な生活を送らなければならなくなった。 <br>
-
-「ーーまったくあのクソババア！いった！」 <br>
-
-壁を殴ったら拳がえらいことになった。なんてこった。 <br>
-
-「……人間ってもろいな」 <br>
-
-ーー神としての力が弱まっていく。 <br>
-
-「……それだけは、間違ってないようだな」 <br>
-
-しかし、それは僕がどうこうすればなんとかなることではない。 <br>
-
-「人間に信じてもらうためのインターン……か」 <br>
-
-なぜか、放課後に喧嘩を売ってきたあの男子の顔が浮かんできた。 <br>
-
-「……めんどうくさい」 <br>
-
-明香はそのまま、眠りついた。 <br>
- 
-<hr>
-
-今日は何が入っているのかな。何が私を待っているのかな。イモムシ？ゴキブリ？それともぎっちぎっちに詰められた使用済みティッシュ？ <br>
-
-一人の女子生徒が下駄箱の前に立て、そわそわと何かをためらっている。 <br>
-
-もう心の準備ができている。さあ、来い……！ <br>
-
-震えている女子生徒は、思いっきり下駄箱を開けた。 <br>
-
-「な……い？」 <br>
-
-下駄箱には靴以外、何も入ってなかった。 <br>
-
-そんなはずがない。だって、下駄箱にゴミを入れられるのはもう何か月も続いていて、もう慣れてしまうくらいだった。いや、ぜんっぜん慣れたくないんだけど！ <br>
-
-もしかたら下駄箱じゃなくて、直接に靴に入れたり……と女子生徒は思って靴の中を確認したが、そんなものもなかった。 <br>
-
-嬉しいっちゃ嬉しいけど。なんで……？ <br>
-
-バタっ。 <br>
-
-少し離れた距離で、右手に包帯を巻かれている、もう一人の女子生徒がいた。彼女の下駄箱から落ちこぼれたと思われる４匹のカブトムシが、まだむずむずと動いている。 <br>
-
-「ひっ……！」 <br>
-
-周りにいる全員は思わず声を漏らしてしまった。しかし、当の包帯を巻きつけている女子生徒はただただ床に落ちているカブトムシを睨みつけて、下駄箱から一通の手紙を取り出した。 <br>
-
-「『自分の立場をわきまえろ』……」 <br>
-
-と、彼女は手紙の内容を読み上げた。 <br>
-
-「……くだらねえ」 <br>
-
-包帯を纏っている少女は手紙を破って、下駄箱の前から去ろうとした。 <br>
-
-「ま、待って…！」 <br>
-
-少女は呼びかける声で足を止めた。 <br>
-
-「あぁ？」 <br>
-
-「あ、あの……！」 <br>
-
-「言いたいことあるならさっさと言え」 <br>
-
-「……わ、私、黎欣（りーしん）と、言います」 <br>
-
-少女は一瞬戸惑う顔をした。 <br>
-
-「で？」 <br>
-
-「ほ、放課後に、お話を伺っても、よろしいでしょうか」 <br>
-
-「……別に構わんが」 <br>
-
-「はい！じゃあ、ほ、放課後に、ここでお待ちします」 <br>
-
-「……あぁ」 <br>
-
-欣は不安そうに、包帯少女の去る姿をじっと見ていた。 <br>
-
-明香が教室に入ったら、騒がしかった教室が一瞬静かになった。 <br>
-
-「おいおい」 <br>
-
-「来たぞ、あいつ」 <br>
-
-「ていうか、なんで包帯なんて巻いてやがるんだ」 <br>
-
-「喧嘩でもしたんじゃねえの？」 <br>
-
-「ありそうーーあはははははは！」 <br>
-
-そんな喧しいなか、一人の男子生徒が椅子から立ち上がった。 <br>
-
-「お前さあ」 <br>
-
-男子生徒は明香の前に立て、威張るようにこう言った。 <br>
-
-「これで思い知ったか」 <br>
-
-「……なんのこと？」 <br>
-
-「せっかく転校してきたんだしさ、ちょっとしたプレゼントを用意してあげたんだ。どうだ？気に入ってくれたんかな」 <br>
-
-それを聞いた男子たちのクスクス笑いが絶えない。 <br>
-
-「ああ。これのことか？」 <br>
-
-明香は退屈そうに一匹のカブトムシを取り出した。 <br>
-
-「なっ」 <br>
-
-クラスの雰囲気が一瞬で騒然となった。 <br>
-
-「こいつはいいなー」 <br>
-
-明香は指で軽くカブトムシをなぶっている。 <br>
-
-「結構指にしがみついてくるし、かなり健康ってことだ。これだけ健康に飼えているのは、君もその見た目と違って、結構繊細なやつではないか」 <br>
-
-耳に触った言葉を聞いて、男子生徒は表情を歪めていた。 <br>
-
-明香がカブトムシを取り出したところを見た欣は愕然とした。あのとき、カブトムシはそのまま見捨てられたのに。今彼女の手にあるのはどこから……？ <br>
-
-「人を馬鹿にしやがって！」 <br>
-
-男子生徒は突き上げてくる怒りを収められずに怒鳴りだした。 <br>
-
-「馬鹿にしているのはそっちの方だろ。先に言っとくけど、女は全員虫が怖いとは限らんぞ」 <br>
-
-男子生徒は頭に血がのぼりすぎたせいか、何も言えずに震えて立っていた。 <br>
-
-明香は男子生徒の首と肩の間に貼ってある絆創膏をちらっと見た。 <br>
-
-「無駄な偽装はやめたほうがいい。忠告だ」 <br>
- 
-
-「……お前に何が分かるんだよ」 <br>
-
-二人は無言で見つめあい、周りも身が引き締まるような空気になってきた。 <br>
-
-「皆さんー？授業始まるよー早く席につきなさい！」 <br>
-
-気まずい空気を、教室に入ってきた教師が破ったのだった。 <br>
-
-<hr>
-
-放課後、学校玄関で。 <br>
- 
-「で、話って何？」 <br>
-
-「……本当に申し訳ございません！」 <br>
-
-「……は？」 <br>
- 
-欣は深く頭を下げて、震えている。 <br>
-
-「き、きっと、私の代わりに、言さんたちからいじめを受けるようになったんじゃないかなあて……わ、私のせいです！本当にごめんなさい！」 <br>
-
-目の前にいる、黎欣と名乗る少女はいきなり謝りだした。 <br>
-
-「ちょっと待て……最初から、最初から説明しろよ」 <br>
-
-「……すみません、わかりました」 <br>
-
-どんだけ謝るんだよこの女と、明香は思った。 <br>
-
- 「まず、いじめってのはなんだ」 <br>
-
- 「今朝、明香さんの下駄箱にカブトムシが入っていたじゃないですか。言さんたちはよくそういうのやっちゃいます」 <br>
-
-あれはいじめと言えるのか。あまりにも阿呆らしすぎて、ただのいたずらだと思ったが。 <br>
- 
-「……次、君の言う言さんって、誰のことだ」 <br>
-
-「え？あ……昨日も明香さんに喧嘩を売ろうとしていた、あの男子です。名前は言羿賢っていうんですけど」 <br>
-
-「で、なぜ僕に謝る」 <br>
-
-「それは……昨日まで、言くんたちからいじめを受けてきました。私の下駄箱にゴミとか虫を入れたり、机に落書きをしたり、すれ違うたびに『ブス』『死ね』って言ってきたり……」 <br>
-
-欣は、今にも泣きそうな顔をしている。 <br>
-
-「……バカバカしい。で、昨日までってどういうことだ」 <br>
-
-「り、理由は私にもわかりませんが……言くんたちの目標は、私から明香さんに変わったようです」 <br>
-
-「ま、僕的にはどうでもいいんだけどな」 <br>
-
-「そ、そんな」 <br>
-
-欣は少し暗く、心配そうな顔をした。 <br>
-
-どいつこいつもそんな顔をしやがる。もううんざりだ。 <br>
- 
-「大したことじゃなさそうだし」 <br>
-
-「……」 <br>
-
-なぜか、欣は無言のままに明香をじっと見ている。 <br>
-
-「言ったはずだ。言いたいことあるならさっさと言え」 <br>
-
-「……明香さんって、強いんですね。私なんかと違って」 <br>
-
-「僕はくだらない奴が嫌いだからな。嫌いな奴らのことを考えても時間の無駄だ」 <br>
-
-「傷ついたり、悲しんだり……しないんですか」 <br>
-
-「……ま、普通はそうなるよな。……て、泣くなよ！これじゃあ僕が泣かしたみたいじゃないか！」 <br>
-
-気づいたら、欣はぼろぼろと涙が流れている。 <br>
-
-「だって、明香さんは強くて、言くんたちにも立ち向かえて、すごいなって思って……それなのに私は……何もできなくて、悔しくって……」 <br>
-
- 「……」 <br>
-
-明香は号泣している欣を見て、なぜか、いつものように目を逸らすことができなかった。 <br>
-
-「ご、ごめんなさい！いきなり泣いちゃって……明香さんが悪いってわけじゃないです」 <br>
-
-「……先に言っとくけど」 <br>
-
-「……はい？」 <br>
-
-「僕は軟弱なやつが嫌いだ」 <br>
-
-欣はびくっとすぐ泣きをやめ、はっと息を飲んだ。 <br>
- 
-「ごめ……」 <br>
-
-「だが素直なやつは嫌いじゃない」 <br>
-
-明香は憚らずに、白けた笑いをした。 <br>
-
-「……素直？」 <br>
-
-「君は軟弱で怖がり屋だが、素直なやつだ。怯えてばかりで動きが取れないこともあろうが、恐怖を感じるのは人間の本能だ。怖くて何もできず、行き詰った末にかえって良い転機を迎えられたっていうのは、かつて人間の歴史で何度もあったことだ」 <br>
-
-「……明香さん、もしかして」 <br>
-
-「なんだ」 <br>
-
-「中二病ですか？」 <br>
-
-「は？ぶっ祓ってやるぞ」 <br>
-
-「いやいや、なんですか？ぶっ祓って。なんとなくそう思っただけです。口調とか、言葉遣いとか……」 <br>
- 
-真剣に説明したのに、人間からしたらそういう風に見えるのか。困ったものだ。 <br>
-
-「ごめんなさい、ただの冗談です」 <br>
-
-欣はにこにこと笑いだした。 <br>
-
-「そういえば、右手の包帯はどうしちゃったんですか」 <br>
-
-欣は心配そうな顔でかすかに血の滲んだ包帯で巻きられた右手を見つめている。 <br>
-
-「これ？昨日壁を殴ったら拳が血まみれになった」 <br>
-
-「え！？大丈夫ですか！？」 <br>
-
-「大したことねえって」 <br>
-
-何事もなかったかのようにそう言った明香を見て、この人は怒らせちゃだめだなあと、欣は思った。 <br>
-
-「それにしても……なぜか明香さんと一緒にいると、悩みとか、色々話せちゃうんですね。」 <br>
-
-「そりゃあ何百年も聞いてきたからな……」 <br>
-
-「ほら出た、中二病」 <br>
-
-しまった。 <br>
-
-「いや、だからそれは……あぁもういい！」 <br>
-
-いつの間にか、欣はもう涙が出なくなり、楽しそうに微笑んでいる。 <br>
-
-「……明香さん」 <br>
-
-「なんだよ」 <br>
-
-「友達になっても、よろしいでしょうか」 <br>
-
-わずかだが、「友達」という響きで、明香の胸に今までになかった感情が生まれてきた。 <br>
-
-「……勝手にしろ。もう帰る」 <br>
-
-「夕飯、一緒にいかがですか？私の行きつけのカレー屋さん、紹介してさしあげましょうか。」 <br>
-
-「か、カレー……」 <br>
-
-ごくり。 <br>
- 
-別にカレーなんてどうでもいい……そう、どうでもいいのだ。明香は心のなかで自分に言い聞かせたが、実際は欣でも見破れるほど明らかに喜んでいるのだった。 <br>
-
-「し、仕方ないな。そこまで言うのなら……」 <br>
-
-「さあさあ急ぎましょう！」 <br>
-
-「ちょ、そんなに押すなって」 <br>
-
-二人の後ろ姿は、夕日色に染められていた。 <br>
-
-</div></h2>
-	</td>
+		<td width="100%"  align="center" valign="middle">
+			<div class="Title1">ご縁がありますように</div>
+		</td>
 	</tr>
-
-    <tr>
-      <td width=100% height=200px align="center" valign="bottom"><a href="index.html" target="_top">
-        網頁設計及維護：楊士賢、王裕民<br>
-		最近更新日期：20xx/xx/xx</a></td>
-    </tr>
-	
-  </table>
- 
+</table>
 </div>
+
+
+<div class="chapterlist2" id="chapterlist2" onmouseover="mouseover(this)" onmouseout="mouseout(this)"></div>
+<div class="chapterlist" id="chapterlist" onmouseover="mouseover(this)" onmouseout="mouseout(this)">
+	<table border="0" cellspacing="0" padding="0" align="middle" >
+		<tr><td align="middle"><div class="Title1" style="font-size: 45px;">目次</div></td></tr>
+		<tr><td id="C1page"><div class="bt">一、灰にならず白黒</div></td></tr>
+		<tr><td id="C2page"><div class="bt">二、泥濘で藻搔く苗</div></td></tr>
+		<tr><td id="C3page"><div class="bt">三、漂い払われ暁雲</div></td></tr>
+		<tr><td id="C4page"><div class="bt">四、筆に秘める憎悪</div></td></tr>
+		<tr><td id="C5page"><div class="bt">五、長丁場も瞬く間</div></td></tr>
+	</table>
+</div>
+
+<table width="100%" border="0" align="center" valign="center" cellspacing="0" padding="0" id="t2" class="t2" >
+	<tr valign="top" width="100%">
+		<td width="50%"  bgcolor="#FCF6EE" height="100%" align="center">
+			
+			<!--test<div class="flip1"><table><tr><td id="test2">tes tes te te test</td></tr></table></div>-->
+			<div class="flip1"><img id="m1" src="C1page/1-3.png" onerror="imgError()" draggable="false"></div>
+
+		</td>
+		<td width="50%" id="td2.2" valign="top" align="center">
+			<div class="flip3"><img id="m2" src="C1page/1-2.png"draggable="false"></div>
+
+		</td>
+	</tr>
+	<tr>			
+		<table width="100%" border="0"  align="center" valign="center">
+			<tr>
+				<td width="33%"  align="right" valign="middle">
+					<button id="b1" class="button button1" >次へ</button><br>
+					<input type="button" id="b3" onclick="javascript:location.href='#t2'" value="↑" >
+				</td>
+
+				<td width="34%" align="center" valign="middle">
+					<div  class= "page">
+						
+						第<input id="i1" type="number" min="3" max="400" value="3" step="0" placeholder="..." onfocus="changepage()" onfocusout="changepageout()">ページ
+							<button id="sw" class="button sw">飛ぶ</button>
+							<div class="dropdown-content" id="DC">
+								ページを入力してください					
+							</div><br>
+						第&nbsp;&nbsp;<span id = "page0"></span>&nbsp;&nbsp;ページ
+					</div>
+					
+					<!--<span id = "g">1</span><br>跳頁
+					測試-->
+				</td>
+
+				<td width="33%"  align="left" valign="middle">
+					<button id="b2" class="button button2">戻る</button><br>
+					<input type="button" id="b3" onclick="javascript:location.href='#t2'" value="↑" >
+				</td>
+			</tr>
+		</table>
+	</tr>
+</table>
+
+<div id="copyright2" onmouseover="mouseover(this)" onmouseout="mouseout(this)">→</div>
+<div class="copyright" id="copyright" onmouseover="mouseover(this)" onmouseout="mouseout(this)">
+	<table width="100%" border="0" id="t5">
+		<tr>
+			<td width="100%" align="center" valign="middle"><a href="index.html" target="_top">
+				ウェブサイトデザイナー：楊士賢<br><br>
+				Copyright © 2021 ご縁がありますように製作チーム All rights reserved.</a>
+			</td>
+		</tr>
+	</table>
+</div>
+
+
+<script language="JavaScript" type="text/javascript">
+
+		var page0 = 3;//顯示頁碼 m1.scr的頁數
+		var page = 3;//傳送頁數
+		var Chapter = 1;
+
+		//自動設定高度
+		//var windowHeight = window.outerHeight;
+			//document.getElementById('t2').height = windowHeight*1.47;
+			//document.getElementById('td2.2').height = windowHeight*1.47;
+
+		//自動設定寬度
+		//var windowWidth = window.outerWidth;
+		//windowWidth = windowWidth*0.88;
+		//document.getElementById('f').width = windowWidth;
+
+			//跳頁
+			sw.onclick = function() {
+				x = document.getElementById('i1').value;
+				c2 = page;
+				c3 = page-1;
+				page0 = x;
+				page = x;
+				document.getElementById('page0').textContent = Chapter+'-'+page0;
+				p = m1.src.replace(c2+'.png',page+'.png');
+				document.getElementById('m1').src = p;
+				page--;
+				p2 = m2.src.replace(c3+'.png',page+'.png');
+				document.getElementById('m2').src = p2;
+				page++;
+			}
+
+			//換章
+			function imgError() {
+				alert('章を変えてください。請換章。');
+			}
+			
+			//下一頁
+			b1.onclick = function() {
+				c = page;
+				page0++;
+				page0++;
+				page++;
+				c2 = page;
+				page++;
+				document.getElementById('page0').textContent = Chapter+'-'+page0; 
+				p = m1.src.replace(c+'.png',page+'.png');
+				document.getElementById('m1').src = p;
+
+				//換m2
+				c3 = page-3;
+				p2 = m2.src.replace(c3+'.png',c2+'.png');
+				document.getElementById('m2').src = p2;
+
+				//跳頁
+				document.getElementById("i1").value = page;
+				//測試
+				//document.getElementById('g').textContent = p2;
+
+			}
+
+			//上一頁
+			b2.onclick = function() {
+				d = page;
+					if(d<2){
+					d=2;
+					}
+					page0--;	
+					page0--;
+				page--;
+				d2 = page;
+				page--;	
+					if(page<3){
+					page=3;
+					}
+					if(page0<3){
+						page0=3;
+					}
+
+				document.getElementById('page0').textContent = Chapter+'-'+page0;
+				document.getElementById('i1').value = page0; 
+				p = m1.src.replace(d+'.png',page+'.png');
+				document.getElementById('m1').src = p;
+
+				//換m2
+				d3 = page-1;
+					if(d3<2){
+						d3=2;
+					}
+				p2 = m2.src.replace(d2+'.png',d3+'.png');
+				document.getElementById('m2').src = p2;
+
+				//跳頁
+				document.getElementById("i1").value = page;
+
+				//測試
+				//document.getElementById('g').textContent = p;
+
+			}
+
+			C1page.onclick = function() {
+				C = 1;
+				a = m1.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'5.png');
+				document.getElementById('m1').src = a;
+
+				page--;
+				a2 = m2.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'4.png');
+				document.getElementById('m2').src = a2;
+
+				page0 = 5;
+				page = 5;
+				document.getElementById('page0').textContent = page0;
+
+				//測試
+				//document.getElementById('g').textContent = a2;
+
+				Chapter = C;
+			}
+
+			C2page.onclick = function() {
+				C = 2;
+				a = m1.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'23.png');
+				document.getElementById('m1').src = a;
+
+				page--;
+				a2 = m2.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'22.png');
+				document.getElementById('m2').src = a2;
+
+				page0 = 23;
+				page = 23;
+				document.getElementById('page0').textContent = page0;
+
+				//測試
+				//document.getElementById('g').textContent = a;
+
+				Chapter = C;
+			}
+
+			C3page.onclick = function() {
+				C = 3;
+				a = m1.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'76.png');
+				document.getElementById('m1').src = a;
+
+				page--;
+				a2 = m2.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'75.png');
+				document.getElementById('m2').src = a2;
+
+				page0 = 76;
+				page = 76;
+				document.getElementById('page0').textContent = page0;
+
+				//測試
+				//document.getElementById('g').textContent = a;
+
+				Chapter = C;
+			}
+
+			C4page.onclick = function() {
+				C = 4;
+				a = m1.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'166.png');
+				document.getElementById('m1').src = a;
+
+				page--;
+				a2 = m2.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'165.png');
+				document.getElementById('m2').src = a2;
+
+				page0 = 166;
+				page = 166;
+				document.getElementById('page0').textContent = page0;
+
+				//測試
+				//document.getElementById('g').textContent = a;
+
+				Chapter = C;
+			}
+
+			C5page.onclick = function() {
+				C = 5;
+				a = m1.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'293.png');
+				document.getElementById('m1').src = a;
+
+				page--;
+				a2 = m2.src.replace('C'+Chapter+'page/'+Chapter+'-'+page+'.png','C'+C+'page/'+C+'-'+'292.png');
+				document.getElementById('m2').src = a2;
+
+				page0 = 293;
+				page = 293;
+				document.getElementById('page0').textContent = page0;
+
+				//測試
+				//document.getElementById('g').textContent = a;
+
+				Chapter = C;
+			}
+ 
+			function changepage(){
+				p = page0+3;
+				document.getElementById('DC').style.display = 'block';
+
+				document.getElementById('p1').textContent = p;
+				p = 0;
+			}
+
+			function changepageout(){
+				document.getElementById('DC').style.display = 'none';
+
+			}
+ 
+			function mouseover(){
+				document.getElementById('Title2').style.animationPlayState = 'running';
+				document.getElementById('Title2').style.animationName = 't';
+				document.getElementById('Title3').style.height = 100+'px';
+
+				document.getElementById('chapterlist').style.animationPlayState = 'running';
+				document.getElementById('chapterlist').style.animationName = 'list';
+				document.getElementById('chapterlist').style.zIndex = 7;
+
+				document.getElementById('copyright2').style.zIndex = 4;
+				document.getElementById('copyright').style.animationPlayState = 'running';
+				document.getElementById('copyright').style.animationName = 'cr';
+				
+			}
+
+			function mouseout(){
+				document.getElementById('Title2').style.animationName = 'tback';
+				document.getElementById('Title3').style.height = 15+'px';
+
+				document.getElementById('chapterlist').style.animationName = 'listback';	
+				document.getElementById('chapterlist').style.zIndex = 5;
+				
+				document.getElementById('copyright').style.animationName = 'crback';
+				document.getElementById('copyright2').style.width = 'fit-content';	
+			}
+
+			document.oncontextmenu = function() { return false;};
+
+			document.onkeydown = function(theEvent) {
+				if (theEvent != null) {
+						event = theEvent;
+				}
+
+				if (event.altKey || event.ctrlKey) {
+						return false;
+        		}
+
+				if (event.keyCode >= 112 && event.keyCode <= 123 || event.keyCode == 8) {
+						try {
+								// Firefox 會丟 Exception，所以用 try-cache 擋住
+								event.keyCode = 0; 
+						} catch(e){}
+						return false;
+				}
+			}				
+
+				/*function showCoords(event){
+					event = event || window.event;
+					event.preventDefault();
+					x = event.clientX;
+					y = event.clientY;
+					var cood = 'X:' + x + ',Y:' + y;
+					document.getElementById('test2').innerHTML = cood;
+				}會破壞input number 
+				https://stackoverflow.com/questions/34282278/arrows-not-working-on-input-type-number/37521764*/
+
+
+</script>
+
+
 </body>
 </html>
